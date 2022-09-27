@@ -18,8 +18,6 @@ class PeopleInfo(models.Model):
     book = models.ForeignKey(BookInfo, on_delete=models.CASCADE)
 
     def __str__(self):
-        p = []
-        p.append(self.name)
-        p.append(self.book)
+        p = [self.name, self.book]
         return p
 
